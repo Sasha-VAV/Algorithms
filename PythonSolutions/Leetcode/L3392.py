@@ -7,6 +7,6 @@ class Solution:
         m = nums[1]
         res = 0
         for r in nums[2:]:
-            if (l+r)*2 == m: res += 1
+            if (l+r) << 1 == m: res += 1
             m, l = r, m
         return res
