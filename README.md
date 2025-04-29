@@ -1,8 +1,5 @@
-# AlgorithmProblems
-In this repository, you can find a solution to various tasks related to the algorithm problems of Coderun and Leetcode. 
-Naming structure: Letter + Number; For example "L2933"
-L - LeetCode, C - Coderun; Number 2933 stands for a number of this problem on a given website.
+# Hey there
 
-Languages that I use atm
-- Python
-- Java
+I'm mastering my skill in solving any algorithmic problems, you can check out my solutions.
+
+Most of the solutions are located in the PythonSolutions folder, because I prefer this language in my job.
