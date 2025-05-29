@@ -13,7 +13,7 @@ class Solution:
         for a, b in edges2:
             tree2[a].add(b)
             tree2[b].add(a)
-        #@lru_cache(maxsize=1024)
+        @lru_cache(maxsize=1024)
         def dfs(node, count, prev=None, mode=1):
             if mode == 1:
                 tree = tree1
