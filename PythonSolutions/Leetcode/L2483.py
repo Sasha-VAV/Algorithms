@@ -15,5 +15,4 @@ class Solution:
             if (tmp := nope + y_prefix[-1] - yep) < best_penalty:
                 best_idx = i
                 best_penalty = tmp
-        # uncreachable
         return best_idx
