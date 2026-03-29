@@ -7,17 +7,20 @@ class Solution:
         i = 0
         while count > 0:
             used_char = False
-            if curr >= 26 or i >= n: return ""
+            if curr >= 26 or i >= n: 
+                return ""
             for j in range(n):
-                if res[j] != -1: continue
+                if res[j] != -1:
+                    continue
                 if lcp[i][j] > 0:
                     res[j] = curr
                     count -= 1
                     used_char = True
-            if used_char: curr += 1
+            if used_char:
+                curr += 1
             i += 1
         
-        ref = [[None] * n for _ in range(n)]
+        ref = [[-1] * n for _ in range(n)]
         def find_lcp(source, i, j):
             min_common = min(len(source) - i, len(source) - j)
             for shift in range(min_common):
