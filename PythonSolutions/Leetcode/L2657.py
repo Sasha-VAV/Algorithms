@@ -3,11 +3,20 @@ from typing import List
 
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
-        a = set()
-        b = set()
-        res = [0] * len(A)
-        for i, (x, y) in enumerate(zip(A, B)):
-            a.add(x)
-            b.add(y)
-            res[i] = len(a.intersection(b))
+        left = set()
+        right = set()
+        curr = 0
+        res = []
+        for a, b in zip(A, B):
+            if a in right:
+                curr += 1
+                right.remove(a)
+            else:
+                left.add(a)
+            if b in left:
+                curr += 1
+                left.remove(b)
+            else:
+                right.add(b)
+            res.append(curr)
         return res
